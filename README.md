@@ -1,1 +1,1 @@
-# Griddo client template (styled components)
+# Griddo components template (styled components)
