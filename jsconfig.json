@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@contexts": ["src/config/adapter/contexts.js"],
+      "@hooks": ["src/ui/hooks/index.js"],
+
+      "@griddo-config": ["src/griddo.json"],
+      "@adapters": ["src/config/adapter/index.js"],
+      "@dataPacks/*": ["src/models/data-packs/*"],
+      "@schemas/*": ["src/models/schemas/*"],
+      "@constants/*": ["src/config/constants/*"],
+      "@translations/*": ["src/config/translations/*"],
+      "@stories/*": ["src/stories/*"],
+      "@themes/*": ["src/config/themes/*"],
+      "@utils/*": ["src/utils/*"],
+
+      "@icons/*": ["src/ui/elements/Icon/*"],
+      "@components/*": ["src/ui/components/*"],
+      "@modules/*": ["src/ui/modules/*"],
+      "@templates/*": ["src/ui/templates/*"]
+    }
+  }
+}

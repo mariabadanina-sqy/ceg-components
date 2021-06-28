@@ -1,0 +1,3 @@
+export BUILD_TYPE=major && ./bin/build
+node ./bin/version major
+npm publish

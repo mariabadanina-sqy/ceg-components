@@ -1,0 +1,26 @@
+*.log
+node_modules
+.DS_Store
+Docker
+storybook-static
+.env
+.vscode
+dist
+dist/index.js
+dist/index.esm.js
+
+#package locks
+yarn.lock
+package-lock.json
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
+
+# Yarn Integrity file
+.yarn-integrity
+.yalc/
+yalc.lock
+.npmrc
+src/config/themes/.all-themes.json

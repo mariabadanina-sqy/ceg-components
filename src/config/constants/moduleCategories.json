@@ -1,0 +1,43 @@
+[
+  {
+    "label": "Spacers",
+    "value": "spacers",
+    "featured": true
+  },
+  {
+    "label": "Interactive",
+    "value": "interactive"
+  },
+  {
+    "label": "Collections",
+    "value": "collections"
+  },
+  {
+    "label": "Articles And Events",
+    "value": "articlesAndEvents"
+  },
+  {
+    "label": "Content",
+    "value": "content"
+  },
+  {
+    "label": "Featured",
+    "value": "featured"
+  },
+  {
+    "label": "Studies",
+    "value": "studies"
+  },
+  {
+    "label": "People",
+    "value": "people"
+  },
+  {
+    "label": "Social",
+    "value": "social"
+  },
+  {
+    "label": "Iframe",
+    "value": "iframe"
+  }
+]

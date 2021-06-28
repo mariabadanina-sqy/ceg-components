@@ -1,0 +1,10 @@
+#!/bin/bash
+rm -rf dist 
+
+echo "✓ Themes"
+node scripts/generateThemes
+
+echo "✔︎ Icons"
+node scripts/generateIcons
+
+npx rollup -c

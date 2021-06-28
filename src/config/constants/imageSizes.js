@@ -1,0 +1,128 @@
+export const BG_IMAGE_RESPONSIVE = {
+  fullWidth: [
+    { breakpoint: null, width: '420px' },
+    { breakpoint: '420px', width: '768px' },
+    { breakpoint: '768px', width: '1280px' },
+    { breakpoint: '1280px', width: '1600px' },
+    { breakpoint: '1600px', width: '1920px' },
+  ],
+  card: [
+    { breakpoint: null, width: '768px' },
+    { breakpoint: '768px', width: '420px' },
+  ],
+  featuredProgram: [
+    { breakpoint: null, width: '420px' },
+    { breakpoint: '420px', width: '768px' },
+    { breakpoint: '768px', width: '1280px' },
+    { breakpoint: '1280px', width: '768px' },
+    { breakpoint: '1600px', width: '1280px' },
+  ],
+  heroCard: [
+    { breakpoint: null, width: '420px' },
+    { breakpoint: '420px', width: '768px' },
+    { breakpoint: '768px', width: '1280px' },
+    { breakpoint: '1280px', width: '640px' },
+    { breakpoint: '1600px', width: '640px' },
+  ],
+  eventCard: [
+    { breakpoint: null, width: '420px' },
+    { breakpoint: '420px', width: '768px' },
+    { breakpoint: '768px', width: '384px' },
+    { breakpoint: '1280px', width: '640px' },
+    { breakpoint: '1600px', width: '800px' },
+  ],
+  videoTitle: [
+    { breakpoint: null, width: '400px' },
+    { breakpoint: '1280px', width: '575px' },
+  ],
+  hero: [
+    { breakpoint: null, width: '420px' },
+    { breakpoint: '420px', width: '420px' },
+    { breakpoint: '768px', width: '768px' },
+    { breakpoint: '1280px', width: '1280px' },
+  ],
+};
+
+export const INLINE_IMAGE_RESPONSIVE = {
+  hero: [
+    { breakpoint: null, width: '420px' },
+    { breakpoint: '420px', width: '420px' },
+    { breakpoint: '768px', width: '768px' },
+    { breakpoint: '1280px', width: '1280px' },
+  ],
+  card: [
+    { breakpoint: null, width: '768px' },
+    { breakpoint: '420px', width: '420px' },
+  ],
+  modal: [
+    { breakpoint: null, width: '420px' },
+    { breakpoint: '420px', width: '420px' },
+    { breakpoint: '768px', width: '768px' },
+    { breakpoint: '1024px', width: '1024px' },
+  ],
+  iconMedium: [{ breakpoint: null, width: '96px', height: '96px' }],
+  iconLarge: [{ breakpoint: null, width: '192px', height: '192px' }],
+  avatar: [{ breakpoint: null, width: '192px', height: '192px' }],
+  profile: [
+    { breakpoint: null, width: '320px', height: '240px' },
+    { breakpoint: '240px', width: '240px', height: '240px' },
+  ],
+};
+
+export const IMAGESIZES = {
+  test: { width: 200, height: 200, crop: true },
+  claustro_xl: { width: 150, height: 150, crop: true },
+  descargas_l: { width: 100, height: 88, crop: true },
+  destacadas_xl: { width: 1744, height: 1159, crop: true },
+  distribuidoras_xl: { width: 1540, height: 576, crop: true },
+  distribuidoras_l: { width: 740, height: 480, crop: true },
+  distribuidoras_m: { width: 500, height: 420, crop: true },
+  eventos_l: { width: 780, height: 406, crop: true },
+  folletos_m: { width: 275, height: 400, crop: true },
+  historias_l: { width: 734, height: 954, crop: true },
+  historias_m: { width: 426, height: 554, crop: true },
+  iconos_s: { width: 170, height: 170, crop: true },
+  avatar: {
+    width: 170,
+    height: 170,
+    crop: true,
+    sizes: '(max-width: 170px) 100vw, 170px',
+    srcSet: ['150', '160', '170'],
+    heights: ['150', '160', '170'],
+  },
+  iconLarge: {
+    width: 96,
+    height: 96,
+    crop: true,
+    sizes: '(max-width: 960px) 100vw, 96px',
+    srcSet: ['192'],
+    heights: ['192'],
+  },
+
+  iconos_eventos_xs: { width: 734, height: 954, crop: true },
+  imagen_y_video_xl: { width: 1550, height: 748, crop: true },
+  logos_m: { width: 360, height: 9999, crop: false },
+  logos_s: { width: 150, height: 9999, crop: false },
+  miscelanea_xl: { width: 1744, height: 1159, crop: true },
+  miscelanea_l: { width: 650, height: 650, crop: true },
+  noticias_xl: { width: 1005, height: 523, crop: true },
+  noticias_l: { width: 780, height: 406, crop: true },
+  perfilcandidato_m: { width: 469, height: 604, crop: true },
+  testimonios_xl: { width: 2000, height: 2000, crop: true },
+  testimonios_s: { width: 160, height: 160, crop: true },
+  usuarios_s: { width: 160, height: 160, crop: true },
+  wysiwyg_xl: { width: 1005, height: 9999, crop: false },
+  wysiwyg_l: { width: 470, height: 9999, crop: false },
+  projects_xl: { width: 1542, height: 9999, crop: false },
+  documentDownload: {
+    width: 128,
+    height: 185,
+    crop: true,
+    srcSet: ['128'],
+    heights: ['185'],
+  },
+  profile: {
+    heights: ['240', '196', '280'],
+    srcSet: ['240', '196', '280'],
+  },
+};

@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    {
+      "removeAttrs": {
+        "_attrs": ["fill", "opacity"]
+      }
+    },
+    {
+      "removeTitle": true
+    },
+    {
+      "removeDesc": true
+    },
+    {
+      "cleanupIDs": true
+    },
+    {
+      "removeViewBox": true
+    },
+    {
+      "removeDimensions": true
+    }
+  ]
+}

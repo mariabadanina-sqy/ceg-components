@@ -1,0 +1,2 @@
+export BUILD_TYPE=patch && ./bin/build
+yalc publish

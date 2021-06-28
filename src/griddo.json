@@ -1,0 +1,29 @@
+{
+  "clientId": "client-id",
+
+  "themes": [
+    {
+      "name": "Theme nice name for site nº 1",
+      "id": "standard-theme",
+      "subthemes": ["default", "defaultAlt", "accent"]
+    }
+  ],
+
+  "scripts": {
+    "all-sites": {
+      "oneTrust": {
+        "release/develop": "",
+        "release/staging": "",
+        "release/production": ""
+      },
+      "googleGTM": {
+        "release/develop": "",
+        "release/staging": "",
+        "release/production": ""
+      },
+      "backgroundLazyLoading": {
+        "active": true
+      }
+    }
+  }
+}
