@@ -11,10 +11,7 @@ export const WithPublicId = () => (
       { breakpoint: '1280px', width: '1600px' },
       { breakpoint: '1600px', width: '2000px' },
     ]}
-  >
-    s
-    <Box height="100vh" />
-  </CloudinaryImage>
+  />
 );
 
 export default {
