@@ -21,6 +21,8 @@ import { Reset, Normalize } from './elements';
 
 // import "./fonts.css"
 
+import Fonts from '../../static/font-face.js';
+
 const SiteProvider = (props) => {
   const globalTheme = createGlobalTheme();
   // Breakpoints Alias.
@@ -55,6 +57,7 @@ const SiteProvider = (props) => {
         <Reset />
         <Normalize />
         <GlobalCSS />
+        <Fonts />
         {children}
       </ThemeProvider>
     </CoreSiteProvider>

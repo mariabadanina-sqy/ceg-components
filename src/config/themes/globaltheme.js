@@ -11,14 +11,13 @@ module.exports = {
 
   fontFamily: {
     fontFamilies: {
-      primary: 'Montserrat, sans-serif',
+      primary: 'Hoves',
       secondary: 'PT Serif, serif',
     },
   },
 
   color: {
     colors: {
-      colorfake: { value: '#ff00ff' },
       brand01: { value: theme.brand01 },
       brand02: { value: theme.brand02 },
 
@@ -157,85 +156,105 @@ module.exports = {
     },
     textStyles: [
       {
-        name: 'quote',
-        fontSize: '20px',
-        lineHeight: '32px',
-        fontWeight: '400',
-        fontFamily: 'secondary',
-        fontStyle: 'italic',
-        responsive: [
-          {
-            breakpoint: 'm',
-            fontSize: '28px',
-            lineHeight: '42px',
-          },
-          {
-            breakpoint: 'xxl',
-            fontSize: '32px',
-            lineHeight: '47px',
-          },
-        ],
-      },
-      {
-        name: 'newsCard',
-        fontSize: '13px',
-        lineHeight: '18px',
-        fontWeight: '800',
-        fontFamily: 'primary',
-        textTransform: 'uppercase',
-        responsive: [
-          {
-            breakpoint: 'm',
-            fontSize: '15px',
-            lineHeight: '22px',
-          },
-          {
-            breakpoint: 'xxl',
-            fontSize: '18px',
-            lineHeight: '26px',
-          },
-        ],
-      },
-      {
-        name: 'newsCardFeatured',
-        fontSize: '13px',
-        lineHeight: '18px',
-        fontWeight: '800',
-        fontFamily: 'primary',
-        textTransform: 'uppercase',
-        responsive: [
-          {
-            breakpoint: 'm',
-            fontSize: '28px',
-            lineHeight: '34px',
-          },
-          {
-            breakpoint: 'xxl',
-            fontSize: '30px',
-            lineHeight: '38px',
-          },
-        ],
-      },
-      {
         name: 'display01',
         fontFamily: 'primary',
+        fontWeight: '100',
         fontSize: '62px',
         lineHeight: '75px',
-        fontWeight: '800',
-        textTransform: 'uppercase',
         responsive: [
-          {
-            breakpoint: 'm',
-            fontSize: '90px',
-            lineHeight: '90px',
-          },
-          {
-            breakpoint: 'xxl',
-            fontSize: '100px',
-            lineHeight: '100px',
-          },
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
         ],
       },
+      {
+        name: 'display02',
+        fontFamily: 'primary',
+        fontWeight: '200',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+      {
+        name: 'display03',
+        fontFamily: 'primary',
+        fontWeight: '300',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+      {
+        name: 'display04',
+        fontFamily: 'primary',
+        fontWeight: '400',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+      {
+        name: 'display05',
+        fontFamily: 'primary',
+        fontWeight: '500',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+      {
+        name: 'display06',
+        fontFamily: 'primary',
+        fontWeight: '600',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+      {
+        name: 'display07',
+        fontFamily: 'primary',
+        fontWeight: '700',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+      {
+        name: 'display08',
+        fontFamily: 'primary',
+        fontWeight: '800',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+      {
+        name: 'display09',
+        fontFamily: 'primary',
+        fontWeight: '900',
+        fontSize: '62px',
+        lineHeight: '75px',
+        responsive: [
+          { breakpoint: 'm', fontSize: '90px', lineHeight: '90px' },
+          { breakpoint: 'xxl', fontSize: '100px', lineHeight: '100px' },
+        ],
+      },
+
       {
         name: 'heading3xl',
         fontFamily: 'primary',

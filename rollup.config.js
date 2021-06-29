@@ -9,6 +9,7 @@ import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import aliasPaths from './jsconfig.json';
+import copy from 'rollup-plugin-copy';
 
 const BUILD_TYPE = process.env.BUILD_TYPE;
 const NODE_ENV = 'production';
@@ -48,6 +49,9 @@ export default {
   plugins: [
     alias({
       entries: [...rollUpGriddoAliases],
+    }),
+    copy({
+      targets: [{ src: 'src/static/fonts/', dest: 'dist' }],
     }),
     svgr(),
     postcss(),
@@ -90,16 +94,10 @@ export default {
     // terser(),
   ],
   external: [
-    'axios',
     'styled-components',
     '@sqymagma/theme',
     '@sqymagma/elements',
-    '@thesaurus/icons',
     'beautiful-react-hooks',
     'react',
-    'path',
-    'util',
-    '@react-google-maps/api',
-    'htmlparser2',
   ],
 };
