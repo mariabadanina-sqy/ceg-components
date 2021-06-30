@@ -4,7 +4,7 @@ import { GriddoBig } from '@components/Icon';
 
 export const Welcome = () => (
   <Flex
-    bg="ui02"
+    bg="ui01"
     flexDirection="column"
     justifyContent="space-between"
     alignItems="center"
