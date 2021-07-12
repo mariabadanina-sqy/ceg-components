@@ -4,7 +4,9 @@ import { getSchemaDefaults } from '@utils';
 
 const defaults = getSchemaDefaults('modules', 'BasicContent');
 
-export const Base = () => (
+export const SchemaDefaults = () => <BasicContent {...defaults} />;
+
+export const HolaATodos = () => (
   <BasicContent
     {...defaults}
     image={{

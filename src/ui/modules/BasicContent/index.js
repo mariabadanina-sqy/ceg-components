@@ -11,6 +11,7 @@ export default ({ title, subtitle, detail, image }) => {
         hs={{ default: '0', m: 'm' }}
         vs={{ default: 'm', m: '0' }}
       >
+        <h1>hola</h1>
         <Box width={{ default: '100%', m: '50%' }}>
           <LinkableImage
             publicId={image?.file?.publicId}

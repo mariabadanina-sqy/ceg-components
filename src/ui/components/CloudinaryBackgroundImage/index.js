@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { css } from 'styled-components';
-import { Flex } from '@sqymagma/elements';
-import { useSite } from '@griddo/core';
-import { cloudinaryCloudName } from '@constants';
-import { getURIWithParams } from './utils';
+import * as React from 'react'
+import { css } from 'styled-components'
+import { Flex } from '@sqymagma/elements'
+import { useSite } from '@griddo/core'
+import cloudinaryCloudName from '@constants/cloudinary/cloud-name'
+import { getURIWithParams } from './utils'
 
 const CloudinaryBackgroundImage = ({
   backgroundRepeat = 'no-repeat',
@@ -19,10 +19,10 @@ const CloudinaryBackgroundImage = ({
   src,
   ...props
 }) => {
-  const { cloudinaryDefaults } = useSite();
-  const { domain, uploadFolder } = cloudinaryDefaults;
+  const { cloudinaryDefaults } = useSite()
+  const { domain, uploadFolder } = cloudinaryDefaults
 
-  const root = `${domain}/${cloudinaryCloudName}/${uploadFolder}`;
+  const root = `${domain}/${cloudinaryCloudName}/${uploadFolder}`
 
   const backgroundImageResponsive =
     responsive &&
@@ -34,12 +34,12 @@ const CloudinaryBackgroundImage = ({
             ...cloudinaryDefaults,
             ...responsive[key],
           },
-        });
+        })
 
-        const fullImagePath = `${cloudinaryUrl}/${publicId}`;
-        return [key, `url(${fullImagePath})`];
+        const fullImagePath = `${cloudinaryUrl}/${publicId}`
+        return [key, `url(${fullImagePath})`]
       })
-    );
+    )
 
   return (
     <Flex
@@ -77,6 +77,6 @@ const CloudinaryBackgroundImage = ({
     >
       {children}
     </Flex>
-  );
-};
-export default CloudinaryBackgroundImage;
+  )
+}
+export default CloudinaryBackgroundImage

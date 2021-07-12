@@ -1,32 +1,33 @@
-import * as React from 'react';
-import { SiteProvider, PageProvider } from '@adapters';
-import { createGlobalTheme, createSubThemes } from '@themes/utils';
-import { createGlobalStyle } from 'styled-components';
-import { ThemeProvider } from '@contexts';
-import { Box } from '@sqymagma/elements';
-import { cloudinaryDefaults, cloudinaryCloudName } from '@constants';
-import translations from '@translations';
-import { clientId, themes } from '../src/griddo.json';
+import * as React from 'react'
+import { SiteProvider, PageProvider } from '@adapters'
+import { createGlobalTheme, createSubThemes } from '@themes/utils'
+import { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from '@contexts'
+import { Box } from '@sqymagma/elements'
+import cloudinaryDefaults from '@constants/cloudinary/defaults'
+import cloudinaryCloudName from '@constants/cloudinary/cloud-name'
+import translations from '@translations'
+import { clientId, themes } from '../src/griddo.json'
 
 const Global = createGlobalStyle`
   body {
     margin:0!important;
     padding:0!important;
   }
-`;
+`
 
 const withThemeProvider = (Story, context) => {
   return (
     <StoryWrapper {...context}>
       <Story {...context} />
     </StoryWrapper>
-  );
-};
+  )
+}
 
 const StoryWrapper = ({ children, globals }) => {
-  const { subthemeName, language } = globals;
-  const subthemes = createSubThemes({ theme: themes[0].id });
-  const subtheme = subthemes[subthemeName];
+  const { subthemeName, language } = globals
+  const subthemes = createSubThemes({ theme: themes[0].id })
+  const subtheme = subthemes[subthemeName]
 
   return (
     <SiteProvider
@@ -295,10 +296,10 @@ const StoryWrapper = ({ children, globals }) => {
         </PageProvider>
       </ThemeProvider>
     </SiteProvider>
-  );
-};
+  )
+}
 
-export const decorators = [withThemeProvider];
+export const decorators = [withThemeProvider]
 
 export const globalTypes = {
   subthemeName: {
@@ -323,16 +324,16 @@ export const globalTypes = {
       ],
     },
   },
-};
+}
 
 // Create a <div id="modal" /> to attach react portal
 if (document.getElementById('modal') === null) {
-  const modalRoot = document.createElement('div');
-  modalRoot.setAttribute('id', 'modal');
-  document.body.append(modalRoot);
+  const modalRoot = document.createElement('div')
+  modalRoot.setAttribute('id', 'modal')
+  document.body.append(modalRoot)
 }
-const body = document.body;
-body.id = `griddo@${clientId}`;
+const body = document.body
+body.id = `griddo@${clientId}`
 
 //order: ["Start here", ["Cover", "Welcome"], "Core", "Components", "Playground"],
 
@@ -351,4 +352,4 @@ export const parameters = {
     },
   },
   actions: { disable: true },
-};
+}

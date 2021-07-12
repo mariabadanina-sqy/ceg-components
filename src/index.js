@@ -1,11 +1,13 @@
-import components from '@components';
-import modules from '@modules';
-import * as templates from '@templates';
+import components from '@components'
+import modules from '@modules'
+import * as templates from '@templates'
 
-import { themes as allThemes } from './griddo.json';
+import { themes as allThemes } from './griddo.json'
 
-import { moduleCategories, cloudinaryDefaults } from '@constants';
-import translations from '@translations';
+import moduleCategories from '@constants/moduleCategories'
+import cloudinaryDefaults from '@constants/cloudinary/defaults'
+
+import translations from '@translations'
 
 import {
   mapLibrary,
@@ -14,23 +16,23 @@ import {
   SiteProvider,
   PageProvider,
   ThemeProvider,
-} from '@adapters';
+} from '@adapters'
 
-import { parseTheme } from '@griddo/core';
+import { parseTheme } from '@griddo/core'
 
 import {
   componentSchemas,
   moduleSchemas,
   templateSchemas,
   pageSchema,
-} from '@schemas';
+} from '@schemas'
 
 import {
   dataPacksSchemas,
   dataPacksCategoriesSchemas,
   structuredDataSchemas,
   languages,
-} from '@dataPacks';
+} from '@dataPacks'
 
 const schemas = {
   page: pageSchema,
@@ -54,13 +56,13 @@ const schemas = {
   structuredData: {
     ...structuredDataSchemas,
   },
-};
+}
 
 // COMPOSE THEMES
 const themes = allThemes.map((theme) => ({
   label: theme.name,
   value: theme.id,
-}));
+}))
 
 const EXPORTS = {
   schemas,
@@ -81,6 +83,6 @@ const EXPORTS = {
     Page,
     Preview,
   },
-};
+}
 
-export default EXPORTS;
+export default EXPORTS
