@@ -1,5 +1,5 @@
 import { createSchema } from '@utils'
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
+import CLOUDINARY_BASE_UPLOAD_URL from '@constants/cloudinary/base-upload-url'
 
 export default createSchema({
   schemaType: 'module',
@@ -225,11 +225,11 @@ export default createSchema({
     navigationBannerBGColor: '#50ABFF',
   },
   thumbnails: {
-    '1x': `${CLOUDINARY_URL}/thumbnails/Header`,
-    '2x': `${CLOUDINARY_URL}/thumbnails/Header@2x`,
+    '1x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/Header`,
+    '2x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/Header@2x`,
   },
   styles: {
-    S001: `${CLOUDINARY_URL}/thumbnails/HeaderStyle01`,
-    S002: `${CLOUDINARY_URL}/thumbnails/HeaderStyle02`,
+    S001: `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/HeaderStyle01`,
+    S002: `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/HeaderStyle02`,
   },
 })

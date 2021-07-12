@@ -1,5 +1,5 @@
 import { createSchema } from '@utils'
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
+import CLOUDINARY_BASE_UPLOAD_URL from '@constants/cloudinary/base-upload-url'
 
 export default createSchema({
   schemaType: 'module',
@@ -48,7 +48,7 @@ export default createSchema({
   },
 
   thumbnails: {
-    '1x': `${CLOUDINARY_URL}/thumbnails/Distributor`,
-    '2x': `${CLOUDINARY_URL}/thumbnails/Distributor@2x`,
+    '1x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/Distributor`,
+    '2x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/Distributor@2x`,
   },
 })

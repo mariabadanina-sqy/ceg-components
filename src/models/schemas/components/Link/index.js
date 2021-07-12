@@ -1,5 +1,5 @@
 import { createSchema } from '@utils'
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
+import CLOUDINARY_BASE_UPLOAD_URL from '@constants/cloudinary/base-upload-url'
 
 export default createSchema({
   schemaType: 'component',
@@ -34,15 +34,15 @@ export default createSchema({
           options: [
             {
               value: 'primary',
-              img: `${CLOUDINARY_URL}/themes/primaryStyle`,
+              img: `${CLOUDINARY_BASE_UPLOAD_URL}/themes/primaryStyle`,
             },
             {
               value: 'secondary',
-              img: `${CLOUDINARY_URL}/themes/secondaryStyle`,
+              img: `${CLOUDINARY_BASE_UPLOAD_URL}/themes/secondaryStyle`,
             },
             {
               value: 'link',
-              img: `${CLOUDINARY_URL}/themes/linkStyle`,
+              img: `${CLOUDINARY_BASE_UPLOAD_URL}/themes/linkStyle`,
             },
           ],
           columns: 3,
@@ -67,7 +67,7 @@ export default createSchema({
   },
 
   thumbnails: {
-    '1x': `${CLOUDINARY_URL}/thumbnails/Link`,
-    '2x': `${CLOUDINARY_URL}/thumbnails/Link@2x`,
+    '1x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/Link`,
+    '2x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/Link@2x`,
   },
 })

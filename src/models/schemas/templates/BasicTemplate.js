@@ -1,4 +1,4 @@
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
+import CLOUDINARY_BASE_UPLOAD_URL from '@constants/cloudinary/base-upload-url'
 
 export default {
   schemaType: 'template',
@@ -41,7 +41,7 @@ export default {
   },
 
   thumbnails: {
-    '1x': `${CLOUDINARY_URL}/thumbnails/BasicTemplate-new`,
-    '2x': `${CLOUDINARY_URL}/thumbnails/BasicTemplate@2x-new`,
+    '1x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/BasicTemplate-new`,
+    '2x': `${CLOUDINARY_BASE_UPLOAD_URL}/thumbnails/BasicTemplate@2x-new`,
   },
 }
