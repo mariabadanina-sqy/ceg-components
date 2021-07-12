@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { ThemeProvider, ThemeContext } from 'styled-components';
+import * as React from 'react'
+import { ThemeProvider, ThemeContext } from 'styled-components'
 
 import {
   PageContext,
@@ -8,45 +8,45 @@ import {
   SiteContext,
   SiteProvider as CoreSiteProvider,
   SiteConsumer,
-} from '@griddo/core';
+} from '@griddo/core'
 
 import {
   createGlobalTheme,
   createSiteTheme,
   createSubThemes,
   GlobalCSS,
-} from '@themes/utils';
+} from '@themes/utils'
 
-import { Reset, Normalize } from './elements';
+import { Reset, Normalize } from './elements'
 
 // import "./fonts.css"
 
-import Fonts from '../../static/font-face.js';
+import Fonts from '../../static/font-face.js'
 
 const SiteProvider = (props) => {
-  const globalTheme = createGlobalTheme();
+  const globalTheme = createGlobalTheme()
   // Breakpoints Alias.
   // Ahora es posible también acceder a los breakpoints de las props mediante un
   // objeto:
   // <Box width={{ s: "100px", xl: "300px" }}
   globalTheme.mediaquery.mediaqueries.forEach((mq) => {
-    globalTheme.breakpoints[mq.label] = mq.minWidth;
-  });
+    globalTheme.breakpoints[mq.label] = mq.minWidth
+  })
 
-  const { theme, children } = props;
+  const { theme, children } = props
 
   const siteTheme = {
     ...createSiteTheme({ theme: theme }),
     subthemes: {
       ...createSubThemes({ theme: theme }),
     },
-  };
+  }
 
   // If siteTheme has mediaqueries...
   if (siteTheme.mediaquery) {
     siteTheme.mediaquery.mediaqueries.forEach((mq) => {
-      siteTheme.breakpoints[mq.label] = mq.minWidth;
-    });
+      siteTheme.breakpoints[mq.label] = mq.minWidth
+    })
   }
 
   return (
@@ -61,8 +61,8 @@ const SiteProvider = (props) => {
         {children}
       </ThemeProvider>
     </CoreSiteProvider>
-  );
-};
+  )
+}
 
 export {
   PageContext,
@@ -73,4 +73,4 @@ export {
   SiteConsumer,
   ThemeProvider,
   ThemeContext,
-};
+}

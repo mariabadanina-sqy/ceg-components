@@ -3,4 +3,4 @@ export default {
   key: 'detail',
   title: 'Detail',
   hideable: true,
-};
+}

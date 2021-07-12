@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { CloudinaryImage } from '@griddo/core';
+import * as React from 'react'
+import { CloudinaryImage } from '@griddo/core'
 
 export const WithPublicId = () => (
   <CloudinaryImage
@@ -12,7 +12,7 @@ export const WithPublicId = () => (
       { breakpoint: '1600px', width: '2000px' },
     ]}
   />
-);
+)
 
 export default {
   title: 'Components/CloudinaryImage',
@@ -21,4 +21,4 @@ export default {
       showPanel: false,
     },
   },
-};
+}

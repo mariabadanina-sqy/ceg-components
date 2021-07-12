@@ -4,4 +4,4 @@ export default {
     source: { type: 'array' },
   },
   required: ['source'],
-};
+}

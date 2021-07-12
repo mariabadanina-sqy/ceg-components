@@ -6,4 +6,4 @@ export default {
   PROGRAMS: { title: 'Programs' },
   PROJECTS: { title: 'Projects' },
   STORIES: { title: 'Stories' },
-};
+}

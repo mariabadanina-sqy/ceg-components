@@ -1,3 +1,3 @@
-import * as React from 'react';
+import * as React from 'react'
 
-export default () => <div>Header</div>;
+export default () => <div>Header</div>

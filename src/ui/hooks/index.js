@@ -1,17 +1,17 @@
-import { useImage, useLink, usePage, useSite, useI18n } from '@griddo/core';
+import { useImage, useLink, usePage, useSite, useI18n } from '@griddo/core'
 
-import { useBreakpoints } from './useBreakpoints';
-import { useDistributorData } from './useDistributorData';
-import { useFilter } from './useFilter';
-import { useSitemap } from './useSitemap';
-import { useRenderer } from './useRenderer';
+import { useBreakpoints } from './useBreakpoints'
+import { useDistributorData } from './useDistributorData'
+import { useFilter } from './useFilter'
+import { useSitemap } from './useSitemap'
+import { useRenderer } from './useRenderer'
 
 import {
   useTheme,
   useSubTheme,
   useStyledTheme,
   useStyledSubTheme,
-} from './useThemes';
+} from './useThemes'
 
 export {
   useImage,
@@ -28,4 +28,4 @@ export {
   useStyledSubTheme,
   useI18n,
   useRenderer,
-};
+}

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Stack, Box, Text } from '@sqymagma/elements';
-import ModuleWrapper from '@modules/ModuleWrapper';
-import LinkableImage from '@components/LinkableImage';
+import * as React from 'react'
+import { Stack, Box, Text } from '@sqymagma/elements'
+import ModuleWrapper from '@modules/ModuleWrapper'
+import LinkableImage from '@components/LinkableImage'
 
 export default ({ title, subtitle, detail, image }) => {
   return (
@@ -41,5 +41,5 @@ export default ({ title, subtitle, detail, image }) => {
         </Stack>
       </Stack>
     </ModuleWrapper>
-  );
-};
+  )
+}

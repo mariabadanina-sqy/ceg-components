@@ -1,4 +1,4 @@
-import { create } from '@storybook/theming/create';
+import { create } from '@storybook/theming/create'
 
 export default create({
   base: 'light',
@@ -34,4 +34,4 @@ export default create({
   brandTitle: 'IE Thesaurus',
   _brandImage: 'ie-logo-storybook.png',
   brandImage: 'griddo-logo.svg',
-});
+})

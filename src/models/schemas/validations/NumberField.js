@@ -4,4 +4,4 @@ export default {
     default: { type: 'number' },
   },
   required: [],
-};
+}

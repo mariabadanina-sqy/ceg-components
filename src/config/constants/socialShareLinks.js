@@ -3,7 +3,7 @@ export const SOCIAL_SHARE_LINKS = {
   twitter: 'https://twitter.com/intent/tweet?source=webclient&text=',
   linkedin: 'https://www.linkedin.com/shareArticle?mini=true&url=',
   whatsapp: 'whatsapp://send?text=',
-};
+}
 
 export const SOCIAL_ICONS_MAP = {
   flicker: 'flickr',
@@ -15,7 +15,7 @@ export const SOCIAL_ICONS_MAP = {
   newsletter: 'email',
   tiktok: 'tiktok',
   snapchat: 'snapchat',
-};
+}
 
 export const SOCIAL_IDS = {
   facebook: 'social-button-facebook',
@@ -23,4 +23,4 @@ export const SOCIAL_IDS = {
   twitter: 'social-button-twitter',
   linkedin: 'social-button-linkedin',
   youtube: 'social-button-youtube',
-};
+}

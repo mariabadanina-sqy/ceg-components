@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Distributor from '@modules/Distributor';
-import { getSchemaDefaults } from '@utils';
+import * as React from 'react'
+import Distributor from '@modules/Distributor'
+import { getSchemaDefaults } from '@utils'
 
-const defaults = getSchemaDefaults('module', 'Distributor');
+const defaults = getSchemaDefaults('module', 'Distributor')
 
 const queriedItems = Array(3)
   .fill(0)
@@ -12,11 +12,11 @@ const queriedItems = Array(3)
       text: 'Content distributor text',
       href: 'https://www.secuoyas.com',
     },
-  }));
+  }))
 
 export const Base = () => (
   <Distributor {...defaults} queriedItems={queriedItems} />
-);
+)
 
 export default {
   title: 'Modules/Distributor',
@@ -25,4 +25,4 @@ export default {
       showPanel: false,
     },
   },
-};
+}

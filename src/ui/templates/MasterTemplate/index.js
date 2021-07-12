@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from 'react'
 
 const Wrapper = ({ children }) => {
-  return <>{children}</>;
-};
+  return <>{children}</>
+}
 
-export default Wrapper;
+export default Wrapper

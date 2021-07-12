@@ -12,4 +12,4 @@ export default {
     { value: 'h4', label: 'H4' },
     { value: 'span', label: 'span' },
   ],
-};
+}

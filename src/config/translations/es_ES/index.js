@@ -4,4 +4,4 @@ export default {
     es_ES: 'Español',
   },
   hello: 'Hola',
-};
+}

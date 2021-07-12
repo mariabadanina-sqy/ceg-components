@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Flex } from '@sqymagma/elements';
-import { useStyledTheme } from '@hooks';
+import * as React from 'react'
+import { Flex } from '@sqymagma/elements'
+import { useStyledTheme } from '@hooks'
 
 const ModuleWrapper = ({ children, ...props }) => {
-  const { breakpoints } = useStyledTheme();
+  const { breakpoints } = useStyledTheme()
   return (
     <Flex
       bg="ui01"
@@ -16,7 +16,7 @@ const ModuleWrapper = ({ children, ...props }) => {
     >
       {children}
     </Flex>
-  );
-};
+  )
+}
 
-export default ModuleWrapper;
+export default ModuleWrapper

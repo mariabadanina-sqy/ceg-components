@@ -1,1 +1,1 @@
-export default 'thesaurus-cms';
+export default 'thesaurus-cms'

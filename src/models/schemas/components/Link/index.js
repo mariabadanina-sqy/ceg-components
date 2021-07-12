@@ -1,5 +1,5 @@
-import { createSchema } from '@utils';
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary';
+import { createSchema } from '@utils'
+import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
 
 export default createSchema({
   schemaType: 'component',
@@ -70,4 +70,4 @@ export default createSchema({
     '1x': `${CLOUDINARY_URL}/thumbnails/Link`,
     '2x': `${CLOUDINARY_URL}/thumbnails/Link@2x`,
   },
-});
+})

@@ -1,10 +1,10 @@
-import * as React from 'react';
-import BasicContent from '@modules/BasicContent';
-import { getSchemaDefaults } from '@utils';
+import * as React from 'react'
+import BasicContent from '@modules/BasicContent'
+import { getSchemaDefaults } from '@utils'
 
-const defaults = getSchemaDefaults('modules', 'BasicContent');
+const defaults = getSchemaDefaults('modules', 'BasicContent')
 
-export const SchemaDefaults = () => <BasicContent {...defaults} />;
+export const SchemaDefaults = () => <BasicContent {...defaults} />
 
 export const HolaATodos = () => (
   <BasicContent
@@ -16,7 +16,7 @@ export const HolaATodos = () => (
       file: { publicId: 'griddo-components-starter/griddo-01' },
     }}
   />
-);
+)
 
 export default {
   title: 'Modules/BasicContent',
@@ -25,4 +25,4 @@ export default {
       showPanel: false,
     },
   },
-};
+}

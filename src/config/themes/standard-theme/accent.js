@@ -1,6 +1,6 @@
 const {
   color: { colors },
-} = require('./theme.js');
+} = require('./theme.js')
 
 module.exports = {
   // This id must match with the filename and the id in src/griddo.json
@@ -65,4 +65,4 @@ module.exports = {
       disabled02: { value: '#6681BD' },
     },
   },
-};
+}

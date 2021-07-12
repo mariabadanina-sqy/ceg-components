@@ -1,4 +1,4 @@
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary';
+import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
 
 export default {
   displayName: 'Error 404',
@@ -18,4 +18,4 @@ export default {
     '1x': `${CLOUDINARY_URL}/thumbnails/Error404`,
     '2x': `${CLOUDINARY_URL}/thumbnails/Error404@2x`,
   },
-};
+}

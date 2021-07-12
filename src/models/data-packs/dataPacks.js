@@ -1,4 +1,4 @@
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary';
+import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
 
 export default {
   NEWS: {
@@ -72,4 +72,4 @@ export default {
     description: 'It shows last videos from content type videos.',
     image: `${CLOUDINARY_URL}/thesaurus/data-packs-thumbnails/Videos/videos.png`,
   },
-};
+}

@@ -1,51 +1,51 @@
-const fs = require('fs');
-const camelCase = require('camelcase');
-const path = require('path');
-const { exec } = require('child_process');
+const fs = require('fs')
+const camelCase = require('camelcase')
+const path = require('path')
+const { exec } = require('child_process')
 
-const SVG_SRC_DIR = './src/static/svg';
-const SVG_COMPONENTS_DEST_DIR = './src/ui/components/Icon';
-const SVG_DEST_DIR = './src/ui/components/Icon/svg';
+const SVG_SRC_DIR = './src/static/svg'
+const SVG_COMPONENTS_DEST_DIR = './src/ui/components/Icon'
+const SVG_DEST_DIR = './src/ui/components/Icon/svg'
 
 exec(
   `./node_modules/svgo/bin/svgo -q -r --config svgo.json --folder ${SVG_SRC_DIR} --output ${SVG_DEST_DIR}`,
   (err, stdout, stderr) => {
-    if (err) console.error(err);
+    if (err) console.error(err)
   }
-);
+)
 
 // Devuelve un array con TODOS los archivos/carpetas de un path
 function walk(dir) {
-  var results = [];
-  var list = fs.readdirSync(dir);
+  var results = []
+  var list = fs.readdirSync(dir)
   list.forEach(function (file) {
-    file = dir + '/' + file;
-    var stat = fs.statSync(file);
+    file = dir + '/' + file
+    var stat = fs.statSync(file)
     if (stat && stat.isDirectory()) {
       /* Recurse into a subdirectory */
-      results = results.concat(walk(file));
+      results = results.concat(walk(file))
     } else {
       /* Is a file */
-      results.push(file);
+      results.push(file)
     }
-  });
-  return results;
+  })
+  return results
 }
 
-const isSvgFile = (file) => path.extname(file) === '.svg';
+const isSvgFile = (file) => path.extname(file) === '.svg'
 
-const allSVGS = walk(SVG_SRC_DIR).filter(isSvgFile);
+const allSVGS = walk(SVG_SRC_DIR).filter(isSvgFile)
 const allSVGSRelativePath = allSVGS.map((file) =>
   path.relative(SVG_SRC_DIR, file)
-);
+)
 
 const svgBaseName = allSVGS.map((file) =>
   path.basename(file, path.extname(file))
-);
-const svgCamelCase = svgBaseName.map((file) => camelCase(file));
+)
+const svgCamelCase = svgBaseName.map((file) => camelCase(file))
 const svgPascalCase = svgBaseName.map((file) =>
   camelCase(file, { pascalCase: true })
-);
+)
 
 const indexFile = `import * as React from "react"
 import styled, { css } from "styled-components"
@@ -96,6 +96,6 @@ const IcnSystem = ({ name, ...props }) => {
 ${svgPascalCase.map((f, idx) => `export { Base${f} as ${f} }`).join('\n')}
 
 export default IcnSystem
- `;
+ `
 
-fs.writeFileSync(`${SVG_COMPONENTS_DEST_DIR}/index.js`, indexFile);
+fs.writeFileSync(`${SVG_COMPONENTS_DEST_DIR}/index.js`, indexFile)

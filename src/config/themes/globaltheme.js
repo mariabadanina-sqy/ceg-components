@@ -3,7 +3,7 @@ const theme = {
   brand02: '#002D91',
   ink: '#333',
   paper: '#ffffff',
-};
+}
 
 module.exports = {
   // You probably never want edit this id.
@@ -944,4 +944,4 @@ module.exports = {
     tablet: '(min-width : 768px) and (max-width : 1024px)',
     desktop: '(min-width : 1224px)',
   },
-};
+}

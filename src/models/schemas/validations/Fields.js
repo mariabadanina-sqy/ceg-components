@@ -11,4 +11,4 @@ export default {
     maxItems: { type: ['number', 'null'] },
   },
   required: ['title', 'type', 'key'],
-};
+}

@@ -30,4 +30,4 @@ export default {
     },
   },
   required: ['schemaType', 'displayName', 'component', 'category', 'dataPacks'],
-};
+}

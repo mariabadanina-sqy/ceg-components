@@ -5,4 +5,4 @@ export default {
     whiteList: { type: 'array', minItems: 1 },
   },
   required: ['whiteList'],
-};
+}

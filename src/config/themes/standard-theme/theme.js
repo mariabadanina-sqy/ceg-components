@@ -1,13 +1,13 @@
 const {
   color: { colors },
-} = require('../globaltheme.js');
+} = require('../globaltheme.js')
 
 const theme = {
   brand01: '#00338D',
   brand02: '#002D91',
   ink: '#333333',
   paper: '#FFFFFF',
-};
+}
 
 module.exports = {
   // This id must match with the folder name and the id in src/griddo.json
@@ -97,4 +97,4 @@ module.exports = {
       focusLine: { value: '#0022FF' },
     },
   },
-};
+}

@@ -7,4 +7,4 @@ export default {
     dataPacks: { type: ['array', 'null'] },
   },
   required: ['schemaType', 'displayName', 'component', 'dataPacks'],
-};
+}

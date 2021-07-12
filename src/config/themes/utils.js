@@ -1,38 +1,38 @@
 // Estos métodos acceden al archivo: src/config/themes/.all-themes.json
 
-import { createGlobalStyle } from 'styled-components';
-import themes from './.all-themes';
+import { createGlobalStyle } from 'styled-components'
+import themes from './.all-themes'
 
 function createGlobalTheme() {
-  return themes.globalTheme;
+  return themes.globalTheme
 }
 
 function createSiteTheme({ theme }) {
-  const userTheme = themes[theme];
+  const userTheme = themes[theme]
   if (userTheme) {
-    return userTheme.siteTheme;
+    return userTheme.siteTheme
   } else {
     console.warn(
       `Griddo: Theme ${theme} doesn't exist. Using a fallback theme.`
-    );
-    return themes['default-theme'].siteTheme;
+    )
+    return themes['default-theme'].siteTheme
   }
 }
 
 function createSubThemes({ theme }) {
-  const userSubTheme = themes[theme];
+  const userSubTheme = themes[theme]
   if (userSubTheme) {
-    return userSubTheme.subThemes;
+    return userSubTheme.subThemes
   } else {
     console.warn(
       `Griddo: Theme ${theme} doesn't exist. Can't create subthemes. Using a fallback theme.`
-    );
-    return themes['default-theme'].subThemes;
+    )
+    return themes['default-theme'].subThemes
   }
 }
 
 function createSubTheme({ theme, name }) {
-  return createSubThemes({ theme })[name];
+  return createSubThemes({ theme })[name]
 }
 
 const GlobalCSS = createGlobalStyle`
@@ -59,7 +59,7 @@ const GlobalCSS = createGlobalStyle`
 
   /* Reset H1 from normalize */
   h1 { margin:0; font-size: unset; }
-`;
+`
 
 export {
   createGlobalTheme,
@@ -67,4 +67,4 @@ export {
   createSubThemes,
   createSubTheme,
   GlobalCSS,
-};
+}

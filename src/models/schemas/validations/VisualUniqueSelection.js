@@ -4,4 +4,4 @@ export default {
     options: { type: 'array' },
   },
   required: ['options'],
-};
+}

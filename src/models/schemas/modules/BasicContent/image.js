@@ -4,4 +4,4 @@ export default {
   whiteList: ['LinkableImage'],
   key: 'image',
   hideable: true,
-};
+}

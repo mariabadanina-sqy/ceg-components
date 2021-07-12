@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { ThemeProvider } from '@contexts';
+import * as React from 'react'
+import { ThemeProvider } from '@contexts'
 
 import {
   Component,
@@ -9,26 +9,26 @@ import {
   parseTheme,
   CloudinaryBackgroundImage,
   CloudinaryImage,
-} from '@griddo/core';
+} from '@griddo/core'
 
-import { useTheme, useStyledSubTheme } from '@hooks';
-import { subThemeIsEmpty, addBreakpointAlias } from '@utils';
+import { useTheme, useStyledSubTheme } from '@hooks'
+import { subThemeIsEmpty, addBreakpointAlias } from '@utils'
 
 const getTheme = (theme, subTheme) => {
-  const mainTheme = useTheme();
+  const mainTheme = useTheme()
   return theme === 'default'
     ? addBreakpointAlias(mainTheme)
-    : addBreakpointAlias(subTheme);
-};
+    : addBreakpointAlias(subTheme)
+}
 
 const getComponentConfig = (props) => {
-  const { component, theme } = props;
+  const { component, theme } = props
 
   const subTheme = useStyledSubTheme({
     name: theme,
-  });
-  const mappedTheme = getTheme(theme, subTheme);
-  const hasSubTheme = !subThemeIsEmpty(subTheme);
+  })
+  const mappedTheme = getTheme(theme, subTheme)
+  const hasSubTheme = !subThemeIsEmpty(subTheme)
 
   const mappedProps = {
     ...props,
@@ -36,38 +36,38 @@ const getComponentConfig = (props) => {
     // A este nivel de componente no hace falta pasarle theme.
     theme: null,
     moduleTheme: theme,
-  };
+  }
 
   return {
     mappedProps,
     mappedTheme,
     hasSubTheme,
-  };
-};
+  }
+}
 
 const withProviderComponent = (component) => {
   return (props) => {
-    const { mappedProps, mappedTheme, hasSubTheme } = getComponentConfig(props);
+    const { mappedProps, mappedTheme, hasSubTheme } = getComponentConfig(props)
 
-    const mappedComponent = React.createElement(component, mappedProps);
+    const mappedComponent = React.createElement(component, mappedProps)
 
     return hasSubTheme ? (
       <ThemeProvider theme={mappedTheme}>{mappedComponent}</ThemeProvider>
     ) : (
       mappedComponent
-    );
-  };
-};
+    )
+  }
+}
 
 const mapLibrary = (lib) => {
   return Object.fromEntries(
     Object.entries(lib).map(([key, component]) => {
-      return [key, withProviderComponent(component)];
+      return [key, withProviderComponent(component)]
     })
-  );
-};
+  )
+}
 
-export default getComponent;
+export default getComponent
 
 export {
   mapLibrary,
@@ -77,4 +77,4 @@ export {
   parseTheme,
   CloudinaryBackgroundImage,
   CloudinaryImage,
-};
+}

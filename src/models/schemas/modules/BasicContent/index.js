@@ -1,16 +1,16 @@
-import { createSchema } from '@utils';
+import { createSchema } from '@utils'
 
 // Fields
-import title from './title';
-import subtitle from './subtitle';
-import detail from './detail';
-import image from './image';
+import title from './title'
+import subtitle from './subtitle'
+import detail from './detail'
+import image from './image'
 
 // Default values
-import defaults from './defaults';
+import defaults from './defaults'
 
 // Thumbnail
-import thumbnails from './thumbnails';
+import thumbnails from './thumbnails'
 
 export default createSchema({
   schemaType: 'module',
@@ -32,4 +32,4 @@ export default createSchema({
 
   default: defaults,
   thumbnails: thumbnails,
-});
+})

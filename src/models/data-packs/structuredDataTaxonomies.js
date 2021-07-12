@@ -315,4 +315,4 @@ export default {
     clone: null,
     defaults: null,
   },
-};
+}

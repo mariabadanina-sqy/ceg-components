@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const Reset = createGlobalStyle`
 
@@ -51,7 +51,7 @@ const Reset = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
-}`;
+}`
 
 const Normalize = createGlobalStyle`
   html {
@@ -228,6 +228,6 @@ const Normalize = createGlobalStyle`
   [hidden] {
     display: none;
   }
-`;
+`
 
-export { Reset, Normalize };
+export { Reset, Normalize }

@@ -1,10 +1,10 @@
-import * as React from 'react';
-import LinkableImage from '@components/LinkableImage';
-import { getSchemaDefaults } from '@utils';
+import * as React from 'react'
+import LinkableImage from '@components/LinkableImage'
+import { getSchemaDefaults } from '@utils'
 
-const defaults = getSchemaDefaults('components', 'LinkableImage');
+const defaults = getSchemaDefaults('components', 'LinkableImage')
 
-export const SchemaDefault = () => <LinkableImage {...defaults} />;
+export const SchemaDefault = () => <LinkableImage {...defaults} />
 
 export const CustomProps = () => (
   <LinkableImage
@@ -26,7 +26,7 @@ export const CustomProps = () => (
       { breakpoint: '1200px', width: '1200px' },
     ]}
   />
-);
+)
 
 export default {
   title: 'Components/LinkableImage',
@@ -35,4 +35,4 @@ export default {
       showPanel: false,
     },
   },
-};
+}

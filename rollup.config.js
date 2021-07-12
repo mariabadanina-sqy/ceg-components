@@ -1,18 +1,18 @@
-import alias from '@rollup/plugin-alias';
-import svgr from '@svgr/rollup';
-import path from 'path';
-import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
-import resolve from 'rollup-plugin-node-resolve';
-import postcss from 'rollup-plugin-postcss';
-import replace from 'rollup-plugin-replace';
-import { terser } from 'rollup-plugin-terser';
-import aliasPaths from './jsconfig.json';
-import copy from 'rollup-plugin-copy';
+import alias from '@rollup/plugin-alias'
+import svgr from '@svgr/rollup'
+import path from 'path'
+import babel from 'rollup-plugin-babel'
+import commonjs from 'rollup-plugin-commonjs'
+import json from 'rollup-plugin-json'
+import resolve from 'rollup-plugin-node-resolve'
+import postcss from 'rollup-plugin-postcss'
+import replace from 'rollup-plugin-replace'
+import { terser } from 'rollup-plugin-terser'
+import aliasPaths from './jsconfig.json'
+import copy from 'rollup-plugin-copy'
 
-const BUILD_TYPE = process.env.BUILD_TYPE;
-const NODE_ENV = 'production';
+const BUILD_TYPE = process.env.BUILD_TYPE
+const NODE_ENV = 'production'
 
 // Convert jsonfig paths into webpack alias
 const cleanPaths = Object.fromEntries(
@@ -23,21 +23,21 @@ const cleanPaths = Object.fromEntries(
         __dirname,
         aliasPaths.compilerOptions.paths[key][0].split('/*')[0]
       ),
-    ];
+    ]
   })
-);
+)
 
 // Build { find, replacement } alias for rollup with griddo alias
 const rollUpGriddoAliases = Object.keys(cleanPaths).map((key) => ({
   find: key,
   replacement: cleanPaths[key],
-}));
+}))
 
 // Debugging msg
 if (BUILD_TYPE !== 'patch') {
-  console.log('👍 Optimized bundle, terser plugin active');
+  console.log('👍 Optimized bundle, terser plugin active')
 } else {
-  console.warn('⚠️  Non-optimized developer bundle (no terser plugin)');
+  console.warn('⚠️  Non-optimized developer bundle (no terser plugin)')
 }
 
 export default {
@@ -100,4 +100,4 @@ export default {
     'beautiful-react-hooks',
     'react',
   ],
-};
+}

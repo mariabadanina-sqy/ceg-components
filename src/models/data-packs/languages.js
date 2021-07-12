@@ -7,4 +7,4 @@ export default {
     name: 'Spanish',
     label: 'ES',
   },
-};
+}

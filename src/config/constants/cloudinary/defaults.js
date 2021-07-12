@@ -9,4 +9,4 @@ const cloudinaryDefaults = {
   loading: 'lazy',
   backgroundLazy: false,
   decoding: 'auto',
-};
+}

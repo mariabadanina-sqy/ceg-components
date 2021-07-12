@@ -17,4 +17,4 @@ export default {
     options: { type: 'array' },
   },
   required: ['title', 'type', 'key', 'advanced', 'options'],
-};
+}

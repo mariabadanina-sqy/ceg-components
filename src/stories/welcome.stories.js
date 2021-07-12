@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Flex } from '@sqymagma/elements';
-import { GriddoBig } from '@components/Icon';
+import * as React from 'react'
+import { Flex } from '@sqymagma/elements'
+import { GriddoBig } from '@components/Icon'
 
 export const Welcome = () => (
   <Flex
@@ -14,7 +14,7 @@ export const Welcome = () => (
       <GriddoBig width="100%" />
     </Flex>
   </Flex>
-);
+)
 
 export default {
   title: 'Start here/Welcome',
@@ -23,4 +23,4 @@ export default {
       showPanel: false,
     },
   },
-};
+}

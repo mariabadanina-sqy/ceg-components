@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { getSchemaDefaults } from '@utils';
-import { BasicTemplate } from '@templates';
+import * as React from 'react'
+import { getSchemaDefaults } from '@utils'
+import { BasicTemplate } from '@templates'
 
-const defaults = getSchemaDefaults('templates', 'BasicTemplate');
+const defaults = getSchemaDefaults('templates', 'BasicTemplate')
 
-export const SchemaDefault = () => <BasicTemplate {...defaults} />;
+export const SchemaDefault = () => <BasicTemplate {...defaults} />
 
 export const TestingModule = () => (
   <>
@@ -15,7 +15,7 @@ export const TestingModule = () => (
       }}
     />
   </>
-);
+)
 
 export const TestingBackgroundImageLazyLoading = () => {
   return (
@@ -37,8 +37,8 @@ export const TestingBackgroundImageLazyLoading = () => {
         ],
       }}
     />
-  );
-};
+  )
+}
 
 export default {
   title: 'Templates/BasicTemplate',
@@ -47,4 +47,4 @@ export default {
       showPanel: false,
     },
   },
-};
+}

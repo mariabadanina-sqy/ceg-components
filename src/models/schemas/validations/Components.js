@@ -1,4 +1,4 @@
-import fields from './Fields';
+import fields from './Fields'
 
 export default {
   type: 'object',
@@ -25,4 +25,4 @@ export default {
     },
   },
   required: ['schemaType', 'displayName', 'component', 'dataPacks'],
-};
+}

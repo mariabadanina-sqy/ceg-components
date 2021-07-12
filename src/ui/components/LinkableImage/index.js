@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, CloudinaryImage } from '@griddo/core';
+import React from 'react'
+import { Link, CloudinaryImage } from '@griddo/core'
 
 const LinkableImage = ({
   ratio,
@@ -37,8 +37,8 @@ const LinkableImage = ({
           />
         )}
       </div>
-    );
-  };
+    )
+  }
 
   return url ? (
     <Link url={url}>
@@ -46,7 +46,7 @@ const LinkableImage = ({
     </Link>
   ) : (
     <Image />
-  );
-};
+  )
+}
 
-export default LinkableImage;
+export default LinkableImage

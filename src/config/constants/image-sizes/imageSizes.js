@@ -41,7 +41,7 @@ export const BG_IMAGE_RESPONSIVE = {
     { breakpoint: '768px', width: '768px' },
     { breakpoint: '1280px', width: '1280px' },
   ],
-};
+}
 
 export const INLINE_IMAGE_RESPONSIVE = {
   hero: [
@@ -67,7 +67,7 @@ export const INLINE_IMAGE_RESPONSIVE = {
     { breakpoint: null, width: '320px', height: '240px' },
     { breakpoint: '240px', width: '240px', height: '240px' },
   ],
-};
+}
 
 export const IMAGESIZES = {
   test: { width: 200, height: 200, crop: true },
@@ -125,4 +125,4 @@ export const IMAGESIZES = {
     heights: ['240', '196', '280'],
     srcSet: ['240', '196', '280'],
   },
-};
+}

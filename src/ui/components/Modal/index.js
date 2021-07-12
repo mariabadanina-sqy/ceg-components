@@ -1,8 +1,8 @@
-import { theme } from '@sqymagma/theme';
-import { AnimatePresence, motion } from 'framer-motion';
-import * as React from 'react';
-import styled, { createGlobalStyle, css } from 'styled-components';
-import Portal from '../Portal';
+import { theme } from '@sqymagma/theme'
+import { AnimatePresence, motion } from 'framer-motion'
+import * as React from 'react'
+import styled, { createGlobalStyle, css } from 'styled-components'
+import Portal from '../Portal'
 
 const LockBody = createGlobalStyle`
   body {
@@ -12,7 +12,7 @@ const LockBody = createGlobalStyle`
         overflow: hidden;
       `}
   }
-`;
+`
 
 const OuterMotionDiv = styled(motion.div)`
   background-color: ${theme('colors.overlay01')};
@@ -24,7 +24,7 @@ const OuterMotionDiv = styled(motion.div)`
   height: 100vh;
   width: 100%;
   overflow: scroll;
-`;
+`
 
 const InnerMotionDiv = styled(motion.div)`
   align-items: flex-start;
@@ -33,7 +33,7 @@ const InnerMotionDiv = styled(motion.div)`
   ${theme('mq.m')} {
     padding: 70px 60px;
   }
-`;
+`
 const Modal = ({ children, open }) => {
   return (
     <AnimatePresence>
@@ -58,7 +58,7 @@ const Modal = ({ children, open }) => {
         </Portal>
       )}
     </AnimatePresence>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

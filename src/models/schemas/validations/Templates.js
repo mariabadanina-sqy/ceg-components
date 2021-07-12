@@ -29,4 +29,4 @@ export default {
     },
   },
   required: ['schemaType', 'displayName', 'component', 'dataPacks'],
-};
+}

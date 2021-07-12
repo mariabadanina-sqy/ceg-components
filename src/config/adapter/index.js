@@ -6,7 +6,7 @@ import {
   parseTheme,
   CloudinaryBackgroundImage,
   CloudinaryImage,
-} from './components';
+} from './components'
 
 import {
   PageContext,
@@ -17,7 +17,7 @@ import {
   SiteConsumer,
   ThemeContext,
   ThemeProvider,
-} from './contexts';
+} from './contexts'
 
 export {
   mapLibrary,
@@ -35,4 +35,4 @@ export {
   ThemeProvider,
   ThemeContext,
   CloudinaryBackgroundImage,
-};
+}

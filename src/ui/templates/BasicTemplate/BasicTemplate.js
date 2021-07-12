@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { ModuleFromList } from '@modules';
-import MasterTemplate from '../MasterTemplate';
+import * as React from 'react'
+import { ModuleFromList } from '@modules'
+import MasterTemplate from '../MasterTemplate'
 
 const BasicTemplate = ({ heroSection, mainSection }) => {
   return (
@@ -15,7 +15,7 @@ const BasicTemplate = ({ heroSection, mainSection }) => {
           <ModuleFromList {...module} key={module.editorID} />
         ))}
     </MasterTemplate>
-  );
-};
+  )
+}
 
-export default BasicTemplate;
+export default BasicTemplate

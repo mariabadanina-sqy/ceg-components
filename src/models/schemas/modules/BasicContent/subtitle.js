@@ -3,4 +3,4 @@ export default {
   key: 'subtitle',
   title: 'Subtitle',
   hideable: true,
-};
+}

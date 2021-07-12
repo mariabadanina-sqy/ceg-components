@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { usePage, useSite } from '@griddo/core';
-import { getToken, getSiteID, getLang } from '@utils';
+import { useEffect, useState } from 'react'
+import { usePage, useSite } from '@griddo/core'
+import { getToken, getSiteID, getLang } from '@utils'
 
 const getOptions = () => {
-  const lang = getLang();
+  const lang = getLang()
 
   return {
     method: 'GET',
@@ -14,21 +14,21 @@ const getOptions = () => {
       lang,
       ...getToken(),
     },
-  };
-};
+  }
+}
 
 const useSitemap = () => {
-  const [state, setState] = useState();
-  const [loading, setLoading] = useState(true);
-  const { apiUrl, header, footer, fullPath } = usePage();
-  const { siteMetadata } = useSite();
+  const [state, setState] = useState()
+  const [loading, setLoading] = useState(true)
+  const { apiUrl, header, footer, fullPath } = usePage()
+  const { siteMetadata } = useSite()
 
   useEffect(() => {
-    getSitemap();
-  }, []);
+    getSitemap()
+  }, [])
 
   const getSitemap = async () => {
-    const sitemap = {};
+    const sitemap = {}
 
     sitemap['topMenu'] = [
       {
@@ -38,26 +38,26 @@ const useSitemap = () => {
           linkToURL: !!fullPath && `${fullPath.domainUrl}${fullPath.site}`,
         },
       },
-    ];
+    ]
 
     if (!siteMetadata) {
-      const siteID = getSiteID();
-      const siteUrl = `${apiUrl}/site/${siteID}`;
-      const siteRes = await fetch(siteUrl, getOptions());
-      const { name } = await siteRes.json();
-      sitemap['topMenu'][0].label = name;
+      const siteID = getSiteID()
+      const siteUrl = `${apiUrl}/site/${siteID}`
+      const siteRes = await fetch(siteUrl, getOptions())
+      const { name } = await siteRes.json()
+      sitemap['topMenu'][0].label = name
     }
 
-    sitemap['mainMenu'] = header.mainMenu?.elements;
+    sitemap['mainMenu'] = header.mainMenu?.elements
 
-    const footerElements = footer.legalMenu?.elements;
-    sitemap['footerMenu'] = [{ label: null, children: footerElements }];
+    const footerElements = footer.legalMenu?.elements
+    sitemap['footerMenu'] = [{ label: null, children: footerElements }]
 
-    setState(sitemap);
-    setLoading(false);
-  };
+    setState(sitemap)
+    setLoading(false)
+  }
 
-  return [state, loading];
-};
+  return [state, loading]
+}
 
-export { useSitemap };
+export { useSitemap }

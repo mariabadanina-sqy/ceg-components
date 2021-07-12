@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { usePage } from '@griddo/core';
-import { getToken, getSiteID, getLang } from '@utils';
+import { useEffect, useState } from 'react'
+import { usePage } from '@griddo/core'
+import { getToken, getSiteID, getLang } from '@utils'
 
 const getOptions = (body) => {
-  const lang = getLang();
+  const lang = getLang()
 
   return {
     method: 'POST',
@@ -17,20 +17,20 @@ const getOptions = (body) => {
     redirect: 'follow',
     referrerPolicy: 'no-referrer',
     body: JSON.stringify(body),
-  };
-};
+  }
+}
 
 const useDistributorData = (props) => {
-  const [response, setResponse] = useState(null);
-  const { order, quantity, source, mode, fixed, filter } = props;
+  const [response, setResponse] = useState(null)
+  const { order, quantity, source, mode, fixed, filter } = props
 
-  const { apiUrl } = usePage();
+  const { apiUrl } = usePage()
 
   useEffect(() => {
-    const lang = getLang();
-    const isAX = !!lang;
-    const siteID = getSiteID();
-    const url = `${apiUrl}/site/${siteID}/distributor`;
+    const lang = getLang()
+    const isAX = !!lang
+    const siteID = getSiteID()
+    const url = `${apiUrl}/site/${siteID}/distributor`
     const body =
       mode === 'auto'
         ? {
@@ -43,19 +43,19 @@ const useDistributorData = (props) => {
         : {
             mode,
             fixed,
-          };
-    const fetchOptions = getOptions(body);
+          }
+    const fetchOptions = getOptions(body)
 
     const fetchData = async () => {
-      const res = await fetch(url, fetchOptions);
-      const json = await res.json();
-      setResponse(json);
-    };
+      const res = await fetch(url, fetchOptions)
+      const json = await res.json()
+      setResponse(json)
+    }
 
-    isAX && fetchData();
-  }, [mode, order, quantity, fixed, filter, source]);
+    isAX && fetchData()
+  }, [mode, order, quantity, fixed, filter, source])
 
-  return response;
-};
+  return response
+}
 
-export { useDistributorData };
+export { useDistributorData }

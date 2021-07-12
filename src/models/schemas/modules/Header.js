@@ -1,5 +1,5 @@
-import { createSchema } from '@utils';
-import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary';
+import { createSchema } from '@utils'
+import { CLOUDINARY_BASE_UPLOAD_URL as CLOUDINARY_URL } from '@constants/cloudinary/cloudinary'
 
 export default createSchema({
   schemaType: 'module',
@@ -232,4 +232,4 @@ export default createSchema({
     S001: `${CLOUDINARY_URL}/thumbnails/HeaderStyle01`,
     S002: `${CLOUDINARY_URL}/thumbnails/HeaderStyle02`,
   },
-});
+})

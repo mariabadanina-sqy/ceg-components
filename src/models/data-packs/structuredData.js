@@ -49,4 +49,4 @@ export default {
     clone: null,
     defaultValues: null,
   },
-};
+}

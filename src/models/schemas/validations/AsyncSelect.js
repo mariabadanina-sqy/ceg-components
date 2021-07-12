@@ -4,4 +4,4 @@ export default {
     entity: { type: 'string' },
   },
   required: ['entity'],
-};
+}
