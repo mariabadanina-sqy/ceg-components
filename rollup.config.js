@@ -1,12 +1,12 @@
 import alias from '@rollup/plugin-alias'
 import svgr from '@svgr/rollup'
 import path from 'path'
-import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
-import json from 'rollup-plugin-json'
-import resolve from 'rollup-plugin-node-resolve'
+import babel from '@rollup/plugin-babel'
+import commonjs from '@rollup/plugin-commonjs'
+import json from '@rollup/plugin-json'
+import resolve from '@rollup/plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
-import replace from 'rollup-plugin-replace'
+import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
 import aliasPaths from './jsconfig.json'
 import copy from 'rollup-plugin-copy'
@@ -45,6 +45,7 @@ export default {
   output: {
     file: './dist/index.js',
     format: 'cjs',
+    exports: 'auto',
   },
   plugins: [
     alias({
@@ -76,21 +77,17 @@ export default {
     }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
+      preventAssignment: true,
     }),
     babel({
       exclude: 'node_modules/**',
+      babelHelpers: 'bundled',
     }),
     resolve(),
     commonjs({
       exclude: 'src/**',
-      namedExports: {
-        'react-dom': ['createPortal', 'findDOMNode'],
-        '@artsy/fresnel': ['createMedia'],
-        '@griddo/core': ['ComponentWrapper'],
-      },
     }),
-    // BUILD_TYPE === "patch" ? undefined : terser(),
-    // Active terser allways to test core web vitals (temporary)
+    // Active terser in production mode
     // terser(),
   ],
   external: [
