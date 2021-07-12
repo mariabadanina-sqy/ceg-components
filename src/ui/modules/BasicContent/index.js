@@ -11,12 +11,12 @@ export default ({ title, subtitle, detail, image }) => {
         hs={{ default: '0', m: 'm' }}
         vs={{ default: 'm', m: '0' }}
       >
-        <h1>hola</h1>
         <Box width={{ default: '100%', m: '50%' }}>
           <LinkableImage
-            publicId={image?.file?.publicId}
             url={image?.url}
-            overlayOpacity={image?.veil / 100}
+            veil={image?.veil}
+            file={image?.file}
+            ratio={720 / 480}
             responsive={[
               { breakpoint: null, width: '600px' },
               { breakpoint: '768px', width: '1200px' },
