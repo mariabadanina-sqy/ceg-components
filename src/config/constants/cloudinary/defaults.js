@@ -1,4 +1,4 @@
-const cloudinaryDefaults = {
+export default {
   domain: 'https://res.cloudinary.com',
   uploadFolder: 'image/upload',
   fallback404Image: 'dx-placeholders/fallback-404-image',
