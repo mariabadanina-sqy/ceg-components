@@ -44,9 +44,15 @@ export const Colors = () => {
   const { colors } = useStyledTheme()
   return (
     <Flex m="m" flexDirection="column">
-      {Object.keys(colors).map((key) => {
+      {Object.keys(colors).map((key, idx) => {
         return (
-          <Text fontFamily="Hoves" fontSize="16px" weight="500" color={key}>
+          <Text
+            fontFamily="Hoves"
+            fontSize="16px"
+            weight="500"
+            color={key}
+            key={idx}
+          >
             {key}
           </Text>
         )
@@ -61,10 +67,10 @@ export const TextColors = () => {
     <Flex m="m" flexDirection="column">
       {Object.keys(colors)
         .filter((key) => key.match(/text\d/g))
-        .map((key) => {
+        .map((key, idx) => {
           return (
             <Text
-              key={key}
+              key={idx}
               fontFamily="Hoves"
               fontSize="32px"
               weight="500"
